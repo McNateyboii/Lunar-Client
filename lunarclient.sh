@@ -4,7 +4,8 @@ if [ ! -f "$FLAG" ]; then
 sudo apt install fuse
 sudo apt install libnss3
 sudo apt install nano
-mkdir .local/share/applications
+cd ~
+mkdir -p ~/.local/share/applications
 touch ~/.local/share/applications/lunar.desktop
 cat <<EOF > ~/.local/share/applications/lunar.desktop
 [Desktop Entry]
