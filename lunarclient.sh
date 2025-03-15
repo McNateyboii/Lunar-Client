@@ -16,7 +16,7 @@ Terminal=false
 Type=Application
 EOF
 chmod +x lunar.desktop
-ICON_FILE=$(realpath "$(find -maxdepth 1 -type f -name "*.png")")
+ICON_FILE=$(realpath "$(find -type f -name "icon.png")")
 DESKTOP_FILE=$(find ".local/share/applications" -type f -name "*.desktop")
 EXEC_FILE=$(realpath "$(find -name "lunarclient.sh")")
 sed -i "s|^Icon=.*|Icon=$ICON_FILE|" "$DESKTOP_FILE"
